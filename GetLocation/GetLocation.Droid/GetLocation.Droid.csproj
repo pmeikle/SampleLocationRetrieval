@@ -49,6 +49,14 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Acr.XamForms.Mobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Acr.XamForms.Mobile.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Acr.XamForms.Mobile.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ExifLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +95,10 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Xamarin.Mobile.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
