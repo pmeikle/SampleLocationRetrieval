@@ -31,30 +31,16 @@ namespace GetLocation.Droid
 
         public async Task<GPSCoordinates> GetCurrentCoordinates()
         {
-            /*locationManager = (LocationManager)GetSystemService(LocationService);
-            var locationServiceCriteria = new Criteria() {Accuracy = Accuracy.Fine};
-
-            IList<string> acceptableLocationProviders = locationManager.GetProviders(locationServiceCriteria, true);
-
-            if (acceptableLocationProviders.Any())
-            {
-                locationProvider = acceptableLocationProviders.First();
-            }
-            else
-            {
-                locationProvider = String.Empty;
-            }
-
-            locationManager.RequestSingleUpdate(locationProvider, this, null);
-            */
             var locator = new Geolocator(Forms.Context) {DesiredAccuracy = 50};
-            var pos = await locator.GetPositionAsync(timeout: 10000);
-
-            return new GPSCoordinates()
+            var coordinates = new GPSCoordinates();
+            if(locator.IsGeolocationEnabled && locator.IsGeolocationEnabled)
             {
-                Latitude = pos.Latitude,
-                Longitude = pos.Longitude,
-            };
+                var pos = await locator.GetPositionAsync(timeout: 10000);
+                coordinates.Latitude = pos.Latitude;
+                coordinates.Longitude = pos.Longitude;
+            }
+
+            return coordinates;
         }
     }
 }
